@@ -28,7 +28,7 @@ const About = ({ data }) => (
       I will do my best to explain each subject in the most simple way I can.
     </div>
     <div>
-      In addition, In the <Link to={'/resoruces'}>resources</Link> section, I
+      In addition, In the <Link to={'/resources'}>resources</Link> section, I
       will maintain a list of websites which I find useful, divided by subjects.
     </div>
     <h4>Staying up to date</h4>

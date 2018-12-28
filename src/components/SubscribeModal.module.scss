@@ -1,0 +1,92 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  border: 1px solid rgb(204, 204, 204);
+  background: azure;
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.75);
+  z-index: 1000;
+}
+
+.inputsWrapper {
+  display: grid;
+  grid-template-columns: 7rem 15rem;
+  grid-row-gap: 1rem;
+  justify-items: flex-start;
+  padding: 2rem 0;
+
+  input {
+    padding: 0 1rem;
+  }
+}
+
+.form {
+  margin: 0;
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 1rem;
+  height: 1rem;
+  opacity: 0.3;
+  box-shadow: none;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 0.5rem;
+    content: ' ';
+    height: 1rem;
+    width: 1px;
+    background-color: #333;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+.submitButton {
+  background-color: lightblue;
+  border: 2px solid grey;
+}
+
+.wrapper {
+  text-align: center;
+
+  h2,
+  h3 {
+    margin: 2rem 0 1rem;
+  }
+}
+
+.errorsWrapper {
+  color: red;
+  text-align: left;
+}

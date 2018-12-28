@@ -1,0 +1,20 @@
+---
+title: General
+---
+
+| Resource                                                                                                                                                           | Description                                                                            |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------- |
+| [Awesome Cheetsheet](https://github.com/detailyang/awesome-cheatsheet)                                                                                             | A collection of cheetsheet in a variety of technologies                                |
+| [Awesome Hacking](https://github.com/Hack-with-Github/Awesome-Hacking)                                                                                             | A collection of various awesome lists for hackers, pentesters and security researchers |
+| [Awesome Newsletters](https://github.com/zudochkin/awesome-newsletters)                                                                                            | A collection of newsletters about web development                                      |
+| [Awesome](https://github.com/sindresorhus/awesome)                                                                                                                 | A list of awesome lists                                                                |
+| [Design Patterns for Humans](https://github.com/kamranahmedse/design-patterns-for-humans)                                                                          | Simple explaination of design patterns                                                 |
+| [Every Programmer Should Know](https://github.com/mtdvio/every-programmer-should-know)                                                                             | A collection of (mostly) technical things every software developer should know         |
+| [Free Programming Books](https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books.md)                                          | List of free programming books, divided by technology                                  |
+| [Learn Anything](https://learn-anything.xyz)                                                                                                                       | Get a list of resources about the topic you search for                                 |
+| [Learn Regex](https://github.com/ziishaned/learn-regex)                                                                                                            | Regex Tutorial                                                                         |
+| [List of artificial intelligence tools](https://medium.com/@LiamHanel/a-list-of-artificial-intelligence-tools-you-can-use-today-for-personal-use-1-3-7f1b60b6c94f) | For personal use, part 1 of 3                                                          |
+| [Lists](https://github.com/jnv/lists)                                                                                                                              | A list of technical and non-technical lists                                            |
+| [Programming Notes for Professional Books](https://goalkicker.com/)                                                                                                | A series of book in a variety of programming languages                                 |
+| [Public APIs](https://github.com/abhishekbanthia/Public-APIs)                                                                                                      | A collection of public APIs                                                            |
+| [You don't know X](https://github.com/ythecombinator/You-Dont-Know-X)                                                                                              | Curated list of advanced articles in a variety of topics                               |

@@ -5,9 +5,9 @@ import Layout from '../components/Layout'
 
 const WeeklyLinks = ({ data }) => (
   <Layout
-    title="Posts"
-    description="Technical Posts About Web Development"
-    posts={data.allMarkdownRemark.edges}
+    title="Weekly Links"
+    description="Useful links for developers, published every Saturday"
+    posts={data.allMarkdownRemark && data.allMarkdownRemark.edges}
   />
 )
 

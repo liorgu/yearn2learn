@@ -3,7 +3,7 @@ module.exports = {
     title: 'Yearn 2 Learn',
     author: 'Lior Gutweter',
     description: 'Collect and share knowledge about web development',
-    siteUrl: 'https://yearn2learn.netlify.com/',
+    siteUrl: 'https://yearn2learn.netlify.com',
     menuLinks: [
       {
         name: 'Home',
@@ -58,10 +58,10 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
-          'gatsby-remark-external-links',
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+          `gatsby-remark-external-links`,
         ],
       },
     },

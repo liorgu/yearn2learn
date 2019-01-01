@@ -119,7 +119,26 @@ class Layout extends React.Component {
                   name: 'description',
                   content: data.site.siteMetadata.description,
                 },
-                { name: 'google-site-verification', content: 'rseXimMeas_Go1AhnSKitwqqlxJswkXEbQ3y-a90BSQ' }
+                {
+                  name: 'twitter:card',
+                  content: 'summary'
+                },
+                {
+                  name: 'twitter:creator',
+                  content: '@LGutweter'
+                },
+                {
+                  name: 'twitter:title',
+                  content: data.site.siteMetadata.title,
+                },
+                {
+                  name: 'twitter:description',
+                  content: data.site.siteMetadata.description
+                },
+                { 
+                  name: 'google-site-verification', 
+                  content: 'rseXimMeas_Go1AhnSKitwqqlxJswkXEbQ3y-a90BSQ' 
+                }
               ]}
               title={data.site.siteMetadata.title}
             />

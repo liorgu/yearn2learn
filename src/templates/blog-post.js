@@ -8,13 +8,14 @@ import classes from './blog-post.module.scss'
 
 const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark
+  const { title, date } = post.frontmatter
 
   return (
-    <Layout>
+    <Layout title={title}>
       <div className={classes.contentWrapper}>
         <header>
-          <h1>{post.frontmatter.title}</h1>
-          <h2>{post.frontmatter.date}</h2>
+          <h1>{title}</h1>
+          <h2>{date}</h2>
         </header>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
@@ -25,7 +26,7 @@ const BlogPostTemplate = ({ data }) => {
         shortname="yearn2learn"
         config={{
           identifier: post.id,
-          title: post.frontmatter.title,
+          title: title,
         }}
       />
     </Layout>

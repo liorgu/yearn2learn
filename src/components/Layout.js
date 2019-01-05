@@ -102,7 +102,7 @@ class Layout extends React.Component {
                 },
                 {
                   name: 'twitter:title',
-                  content: data.site.siteMetadata.title,
+                  content: this.props.title || data.site.siteMetadata.title,
                 },
                 {
                   name: 'twitter:description',

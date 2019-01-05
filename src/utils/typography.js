@@ -18,6 +18,9 @@ ParnassusTheme.overrideThemeStyles = () => ({
   'button:hover, a:hover': {
     cursor: 'pointer',
   },
+  table: {
+    width: 'auto',
+  },
 })
 
 const typography = new Typography(ParnassusTheme)

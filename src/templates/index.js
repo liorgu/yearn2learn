@@ -17,31 +17,35 @@ const IndexPage = ({ pageContext }) => {
 
   return (
     <Layout>
-      <header>
-        <h1>{title}</h1>
-        <h2>{description}</h2>
-      </header>
-      {group &&
-        group.map(({ node }) => {
-          const postTitle = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <div>
-                <strong>{node.frontmatter.date}</strong>
+      <div className={classes.wrapper}>
+        <header>
+          <h1>{title}</h1>
+          <h2>{description}</h2>
+        </header>
+        {group &&
+          group.map(({ node }) => {
+            const postTitle = node.frontmatter.title || node.fields.slug
+            return (
+              <div key={node.fields.slug}>
+                <div>
+                  <strong>{node.frontmatter.date}</strong>
+                </div>
+                <h3 className={classes.postTitle}>
+                  <Link to={node.fields.slug}>{postTitle}</Link>
+                </h3>
               </div>
-              <h3 className={classes.postTitle}>
-                <Link to={node.fields.slug}>{postTitle}</Link>
-              </h3>
-            </div>
-          )
-        })}
-      <span>
-        <NavLink {...navLinkProps} index={1} label="<" />
-        {[index - 2, index - 1, index, index + 1, index + 2].map(indexLink => (
-          <NavLink {...navLinkProps} index={indexLink} label={indexLink} />
-        ))}
-        <NavLink {...navLinkProps} index={pageCount} label=">" />
-      </span>
+            )
+          })}
+        <span>
+          <NavLink {...navLinkProps} index={1} label="<" />
+          {[index - 2, index - 1, index, index + 1, index + 2].map(
+            indexLink => (
+              <NavLink {...navLinkProps} index={indexLink} label={indexLink} />
+            )
+          )}
+          <NavLink {...navLinkProps} index={pageCount} label=">" />
+        </span>
+      </div>
     </Layout>
   )
 }

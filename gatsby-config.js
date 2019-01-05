@@ -26,6 +26,26 @@ module.exports = {
         link: '/resources',
       },
     ],
+    generatedIndexes: [
+      {
+        pathPrefix: '',
+        title: 'Yearn 2 Learn',
+        description: 'Collect and share knowledge about web development',
+        filters: ['posts', 'weekly-links'],
+      },
+      {
+        pathPrefix: 'posts',
+        title: 'Posts',
+        description: 'Technical Posts About Web Development',
+        filters: ['posts'],
+      },
+      {
+        pathPrefix: 'weekly-links',
+        title: 'Weekly Links',
+        description: 'Useful links for developers, published every Saturday',
+        filters: ['weekly-links'],
+      },
+    ],
   },
   plugins: [
     {

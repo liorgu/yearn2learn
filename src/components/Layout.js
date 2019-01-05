@@ -24,33 +24,6 @@ class Layout extends React.Component {
     this.setState({ isSubscribeModalOpen: false })
   }
 
-  pageBody() {
-    const { posts, title, description, children } = this.props
-    if (children) return children
-    return (
-      <>
-        <header>
-          <h1>{title}</h1>
-          <h2>{description}</h2>
-        </header>
-        {posts &&
-          posts.map(({ node }) => {
-            const postTitle = node.frontmatter.title || node.fields.slug
-            return (
-              <div key={node.fields.slug}>
-                <div>
-                  <strong>{node.frontmatter.date}</strong>
-                </div>
-                <h3 className={classes.postTitle}>
-                  <Link to={node.fields.slug}>{postTitle}</Link>
-                </h3>
-              </div>
-            )
-          })}
-      </>
-    )
-  }
-
   render() {
     return (
       <StaticQuery
@@ -121,11 +94,11 @@ class Layout extends React.Component {
                 },
                 {
                   name: 'twitter:card',
-                  content: 'summary'
+                  content: 'summary',
                 },
                 {
                   name: 'twitter:creator',
-                  content: '@LGutweter'
+                  content: '@LGutweter',
                 },
                 {
                   name: 'twitter:title',
@@ -133,12 +106,12 @@ class Layout extends React.Component {
                 },
                 {
                   name: 'twitter:description',
-                  content: data.site.siteMetadata.description
+                  content: data.site.siteMetadata.description,
                 },
-                { 
-                  name: 'google-site-verification', 
-                  content: 'rseXimMeas_Go1AhnSKitwqqlxJswkXEbQ3y-a90BSQ' 
-                }
+                {
+                  name: 'google-site-verification',
+                  content: 'rseXimMeas_Go1AhnSKitwqqlxJswkXEbQ3y-a90BSQ',
+                },
               ]}
               title={data.site.siteMetadata.title}
             />
@@ -177,7 +150,7 @@ class Layout extends React.Component {
                 </a>
               </div>
             </nav>
-            <div className={classes.pageBodyWrapper}>{this.pageBody()}</div>
+            <div className={classes.pageBodyWrapper}>{this.props.children}</div>
           </div>
         )}
       />

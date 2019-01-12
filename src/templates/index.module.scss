@@ -6,3 +6,19 @@
 .postTitle {
   margin-top: 0;
 }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50vh;
+  margin-bottom: 30px;
+
+  > h1,
+  > h2 {
+    color: linen;
+  }
+}

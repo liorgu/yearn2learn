@@ -1,10 +1,11 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import Layout from '../components/Layout'
 import classes from './index.module.scss'
 import NavLink from '../components/NavLink'
+import Img from 'gatsby-image'
+import { Link, graphql } from 'gatsby'
 
-const IndexPage = ({ pageContext }) => {
+const IndexPage = ({ data, pageContext }) => {
   const {
     group,
     index,
@@ -18,7 +19,14 @@ const IndexPage = ({ pageContext }) => {
   return (
     <Layout>
       <div className={classes.wrapper}>
-        <header>
+        <header
+          className={classes.header}
+          style={{
+            backgroundImage: `url(${
+              data.background.childImageSharp.fluid.src
+            })`,
+          }}
+        >
           <h1>{title}</h1>
           <h2>{description}</h2>
         </header>
@@ -50,3 +58,15 @@ const IndexPage = ({ pageContext }) => {
   )
 }
 export default IndexPage
+
+export const indexQuery = graphql`
+  query {
+    background: file(relativePath: { eq: "description.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

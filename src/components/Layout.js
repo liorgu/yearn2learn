@@ -57,20 +57,6 @@ class Layout extends React.Component {
                 }
               }
             }
-            rss: file(relativePath: { eq: "rss.png" }) {
-              childImageSharp {
-                fixed(width: 24, height: 24) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-            }
-            email: file(relativePath: { eq: "email.png" }) {
-              childImageSharp {
-                fixed(width: 28, height: 28) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-            }
             site {
               siteMetadata {
                 title
@@ -125,7 +111,7 @@ class Layout extends React.Component {
             />
 
             <nav className={classes.navBar}>
-              <div>
+              <div className={classes.menuLinks}>
                 {data.site.siteMetadata.menuLinks.map(link => (
                   <Link key={link.name} to={link.link}>
                     {link.name}
@@ -142,12 +128,12 @@ class Layout extends React.Component {
                 <a href="https://www.linkedin.com/in/lior-gutweter-46156394">
                   <Img fixed={data.linkedin.childImageSharp.fixed} />
                 </a>
-                <a href="/rss.xml">
-                  <Img fixed={data.rss.childImageSharp.fixed} />
-                </a>
-                <a onClick={this.showSubscribeModal}>
-                  <Img fixed={data.email.childImageSharp.fixed} />
-                </a>
+              </div>
+              <div className={classes.subscribe}>
+                {'Subscribe By: '}
+                <a onClick={this.showSubscribeModal}>Email</a>
+                {' / '}
+                <a href="/rss.xml">RSS</a>
               </div>
             </nav>
             <div className={classes.pageBodyWrapper}>{this.props.children}</div>

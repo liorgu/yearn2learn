@@ -28,18 +28,17 @@
   padding: 1rem 0 0 2rem;
   width: 100%;
   background-color: whitesmoke;
-  position: fixed;
-  display: grid;
-  row-gap: 1rem;
   z-index: 999;
 
-  a {
+  .menuLinks a,
+  .iconsWrapper a {
     margin-right: 1rem;
   }
 }
 
-.navBar a,
-.postTitle a {
+.menuLinks a,
+.postTitle a,
+.iconsWrapper a {
   box-shadow: none;
 }
 

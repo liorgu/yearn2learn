@@ -118,7 +118,8 @@ class Layout extends React.Component {
                   </Link>
                 ))}
               </div>
-              <div className={classes.iconsWrapper}>
+            </nav>
+            <div className={classes.iconsWrapper}>
                 <a href="https://twitter.com/LGutweter">
                   <Img fixed={data.twitter.childImageSharp.fixed} />
                 </a>
@@ -135,8 +136,7 @@ class Layout extends React.Component {
                 {' / '}
                 <a href="/rss.xml">RSS</a>
               </div>
-            </nav>
-            <div className={classes.pageBodyWrapper}>{this.props.children}</div>
+            {this.props.children}
           </div>
         )}
       />

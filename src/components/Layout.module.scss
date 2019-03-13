@@ -1,9 +1,5 @@
 .pageWrapper {
-  padding: 2rem;
-}
-
-.pageBodyWrapper {
-  margin-top: 7rem;
+  padding: 3rem 2rem;
 }
 
 .postTitle {
@@ -25,16 +21,16 @@
   position: fixed;
   top: 0;
   left: 0;
-  padding: 1rem 0 0 2rem;
+  padding: 0.5rem 2rem;
   width: 100%;
   background-color: whitesmoke;
   z-index: 999;
+}
 
-  .menuLinks a,
-  .iconsWrapper a {
+.menuLinks a,
+.iconsWrapper a {
     margin-right: 1rem;
   }
-}
 
 .menuLinks a,
 .postTitle a,
@@ -45,4 +41,8 @@
 .iconsWrapper {
   display: flex;
   align-items: center;
+}
+
+.subscribe {
+  padding-bottom: 2rem;
 }

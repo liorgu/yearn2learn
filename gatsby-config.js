@@ -79,6 +79,13 @@ module.exports = {
             },
           },
           `gatsby-remark-embed-gist`,
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              icon: false,
+              offsetY: `60`,
+            }
+          },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,

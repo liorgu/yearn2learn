@@ -23,7 +23,7 @@ const Bio = () => (
         <div className={classes.text}>
           <div>Written by</div>
           <div>
-            <strong>Lior Gutweter</strong>
+            <a href="https://twitter.com/LGutweter"> <strong>Lior Gutweter</strong> </a>
           </div>
         </div>
       </div>

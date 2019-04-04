@@ -4,7 +4,7 @@ date: '2019-04-04'
 slug: '/dilemmas-with-react-hooks-2'
 ---
 
-In this part, we will discuss persistence and memoization with React hooks. First, we will explain these terms. Then, we will see some hooks and other APIs in React that are related to it and display some use cases and optional pitfalls.
+In this part, we will discuss persistence and memoization with React hooks. First, we will explain these terms. Then, we will see some hooks and other APIs in React that are related to it and go through some use cases and optional pitfalls.
 
 - [Persistence vs Memoization](#persistence-vs-memoization)
 - [useState vs useRef vs createRef](#usestate-vs-useref-vs-createref)
@@ -13,15 +13,15 @@ In this part, we will discuss persistence and memoization with React hooks. Firs
 ### Persistence vs Memoization
 
 Persistence and memoization are two big words that have a simple meaning. Let's get over them one by one.  
-Persistence is a property of a state, which still exists even after the process which created it "dies". 
+Persistence is a piece of data, which still exists even after the process who created it "dies". 
 We can connect this term to two hooks that we already encountered in the previous part - [useState and useReducer](https://yearn2learn.netlify.com/dilemmas-with-react-hooks-1). 
 We have a value that we want to keep after the functional component rendered, so we will be able to use it or change it on the next renders of this component. We will see additional React APIs that enable persistence in the next section.
-Memoization is sort of persistence with a twist: we calculated a result of a function, and we want to remember its result so we will be able to avoid repeating the calculation of the same function with the same inputs.
+Memoization is persistence with a twist: we calculate a function, and we want to remember its result so we will be able to avoid repeating the calculation of the same function for the same inputs.
 In React, we have two types of memoization:
 1. Memoization of internal functions within the functional component.
 2. Memoization of the entire functional component.  
 
-There are different APIs for implementing these kinds of memoization. We will compare them and analyze how we can decide whether to use them or not in the last section of this article. 
+There are different APIs for implementing those kinds of memoization. We will compare them and analyze how we can decide whether to use them or not in the last section of this article. 
 
 ### useState vs useRef vs createRef
 
@@ -91,7 +91,7 @@ const [counter, setCounter] = useState(0);
   );
 ```
 
-This is the same code as before, with changing `useRef` with `createRef`. `createRef` method doesn't have any arguments. Its initial value is null, so we set it to 0 in the next line. This code has different behavior from the code with `useRef`. Like before, the step value will be updated and will be no render following clicking on the step button. However, after each render which is triggered by the counter button, the step value is being reset. The reason behind it is simple - `createRef` is called on each render and it initializes the step variable to null. In `useRef`, the initial value is determined on the first render, and additional renders only persist the updated value.  
+This is the same code as before, with changing `useRef` with `createRef`. `createRef` method doesn't have any arguments. Its initial value is null, so we set it to 0 in the next line. This code has different behavior from the code with `useRef`. Like before, the step value will be updated and will be no render following clicking on the step button. However, after each render which is triggered by the counter button, the step value is being reset. The reason behind it is simple - `createRef` is called on each render and it initializes the step variable to null. In `useRef`, the initial value is determined on the first render, and it is persisted during the next renders.  
 Dan Abramov [described](https://www.reddit.com/r/reactjs/comments/a2pt15/when_would_you_use_reactcreateref_vs_reactuseref/eb17vz5) `useRef` mental model as:
 
 ```jsx
@@ -110,7 +110,7 @@ To summarize this section:
 ### useMemo vs useCallback vs memo
 
 Now we are talking about memoization.  
-A quick reminder: We use memoization to gain performance. We save a result of a function that was invoked with specific parameters, so when this function is called again with the same parameters, we wouldn't need to calculate it again, just retrieve the cached result. React has 3 APIs which are related to memoization.
+A quick reminder: We use memoization to gain performance. We save the result of a function that was invoked with specific parameters, so when this function is called again with the same parameters, we wouldn't need to calculate it again, just retrieve the cached result. It is important to remember that memoization also has a cost of memory, where the results are being saved. React has 3 APIs which are related to memoization.
 The first and classic one is `useMemo`. It gets two parameters - the memoized function and an array of dependencies. The result of the function from the previous render will be used in the next render only if the values of all the dependencies were not changed:
 
 ```jsx
@@ -119,7 +119,7 @@ const a = (() => b + c, [b, c]);
 
 Some important points about `useMemo`:
 1. **Only the result from the last render of the component is saved**, not results of other previous renders, and not results of other instances of the same component.
-2. If you forget to pass a second argument to `useMemo`, the memoization will never occur. If you pass an empty array as a second argument, the memoization will always occur.
+2. If you forget to pass a second argument to `useMemo`, the memoization will never occur. If you pass an empty array as the second argument, the function will be executed only once and that result will be memoized for the rest of the component life.
 3. You don't have to put all the variables that are being used at the memoized function on the dependencies array, but you should. Otherwise, you may have bugs that you don't anticipate. In order to prevent those mistakes, I **recommend using the [ESLint plugin of React hooks](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks)** which has a rule named "exhaustive-deps" which will warn you if a dependency was missed.
 4. React team warns that in the future, the memoization won't be guaranteed. From React docs: "You may rely on useMemo as a performance optimization, not as a semantic guarantee. React may choose to “forget” some previously memoized values and recalculate them on next render".  
 
@@ -150,8 +150,19 @@ const MyFunctionalComponent = () => {
 
 We are inside a functional component, and we have a function variable that is created within this component. We didn't use `useMemo` or `useCallback` for memoizing it. This function is created on each render, so we send a new reference of it to SuperComponent every time. It will probably cause SuperComponent to be rendered again even it is useless. In those cases, when we have an array/object/function that its value remains the same but the reference changes, it is a good practice to use `useMemo`/`useCallback`.  
 
+```jsx
+const MyFunctionalComponent = () => {
+  const onChange = useCallback(() => alert('I am memoized'), []);
+  // ...
+  // Some more logic
+  // ...
+  return (
+    <SuperComponent onChange={onChange} />
+  )
+```
+
 Now for the last API - the `memo` function.   
-Wait a minute, maybe we confuse. We already talked about `useMemo`.   
+Wait a minute, I'm confused... We already talked about `useMemo`.   
 No mistake this time. `memo` is not a hook like `useMemo`(all hooks start with "use"), and it was introduced officially before hooks API, in React 16.6. It enables us to memoize the entire component.  
 In class components, we can use `PureComponent` or `shouldComponentUpdate`, for preventing re-render of a component if all of its props didn't change or according to custom logic.  
 The `memo` function gets two parameters - the first is the functional component to memoize, and the second is a function that should return a boolean. This boolean symbolizes if we want to memoize the component or not. 

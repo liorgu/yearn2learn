@@ -4,6 +4,11 @@ date: '2019-04-04'
 slug: '/dilemmas-with-react-hooks-2'
 ---
 
+* [Part 1: States And Reducers](https://yearn2learn.netlify.com/dilemmas-with-react-hooks-1)  
+* Part 2: Persistence And Memoization - this article
+
+---
+
 In this part, we will discuss persistence and memoization with React hooks. First, we will explain these terms. Then, we will see some hooks and other APIs in React that are related to it and go through some use cases and optional pitfalls.
 
 - [Persistence vs Memoization](#persistence-vs-memoization)

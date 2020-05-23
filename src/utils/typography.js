@@ -1,9 +1,10 @@
 import Typography from 'typography'
-import ParnassusTheme from 'typography-theme-parnassus'
+import altonTheme from 'typography-theme-alton'
 
-ParnassusTheme.overrideThemeStyles = () => ({
+altonTheme.overrideThemeStyles = () => ({
   a: {
     color: 'dimgrey',
+    textDecoration: 'underline',
   },
   'h1, h2, h3, h4, h5, h6': {
     color: 'indigo',
@@ -23,7 +24,7 @@ ParnassusTheme.overrideThemeStyles = () => ({
   },
 })
 
-const typography = new Typography(ParnassusTheme)
+const typography = new Typography(altonTheme)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== 'production') {

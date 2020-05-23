@@ -1270,7 +1270,6 @@ async-limiter@~1.0.0:
 async-unist-util-visit@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/async-unist-util-visit/-/async-unist-util-visit-1.0.0.tgz#115c808ef2a5ac6695b691dbb731bbb0ca00e852"
-  integrity sha1-EVyAjvKlrGaVtpHbtzG7sMoA6FI=
   dependencies:
     run-async "2.2.0"
 
@@ -1668,7 +1667,6 @@ babel-plugin-transform-react-jsx@^6.8.0:
 babel-plugin-transform-runtime@^6.23.0:
   version "6.23.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-runtime/-/babel-plugin-transform-runtime-6.23.0.tgz#88490d446502ea9b8e7efb0fe09ec4d99479b1ee"
-  integrity sha1-iEkNRGUC6puOfvsP4J7E2ZR5se4=
   dependencies:
     babel-runtime "^6.22.0"
 
@@ -4966,7 +4964,6 @@ gatsby-react-router-scroll@^2.0.2:
 gatsby-remark-autolink-headers@^2.0.15:
   version "2.0.15"
   resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.0.15.tgz#f52bfa6ffe4d210a377cc8dc6b0da3726e5f4e74"
-  integrity sha512-4UXgE9ecn5aysz4d/kEIOoovYTITiUHIIM0jSeY8i3jh/dEPvsa4DP3w8lmUNznAInMJgTw76rz99DeVfEgJyw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     github-slugger "^1.1.1"
@@ -4990,7 +4987,6 @@ gatsby-remark-copy-linked-files@^2.0.5:
 gatsby-remark-embed-gist@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/gatsby-remark-embed-gist/-/gatsby-remark-embed-gist-1.1.4.tgz#44a3b049b1b0bb769999c814a10eba20073df795"
-  integrity sha512-fbGWa8RnNUuVUJgSUD0VjtgO+bW9Y//vFAqWf8/YC/aKellJ0DriOuOwxHICOQ9z2zlgFmxwjE1MmR54KvXMkA==
   dependencies:
     async-unist-util-visit "^1.0.0"
     babel-plugin-transform-runtime "^6.23.0"
@@ -9791,14 +9787,12 @@ replace-ext@1.0.0, replace-ext@^1.0.0:
 request-promise-core@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/request-promise-core/-/request-promise-core-1.1.1.tgz#3eee00b2c5aa83239cfb04c5700da36f81cd08b6"
-  integrity sha1-Pu4AssWqgyOc+wTFcA2jb4HNCLY=
   dependencies:
     lodash "^4.13.1"
 
 request-promise@^4.2.2:
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/request-promise/-/request-promise-4.2.2.tgz#d1ea46d654a6ee4f8ee6a4fea1018c22911904b4"
-  integrity sha1-0epG1lSm7k+O5qT+oQGMIpEZBLQ=
   dependencies:
     bluebird "^3.5.0"
     request-promise-core "1.1.1"
@@ -9981,7 +9975,6 @@ rss@^1.2.2:
 run-async@2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-2.2.0.tgz#8783abd83c7bb86f41ee0602fc82404b3bd6e8b9"
-  integrity sha1-h4Or2Dx7uG9B7gYC/IJASzvW6Lk=
   dependencies:
     is-promise "^2.1.0"
     pinkie-promise "^2.0.0"
@@ -10654,7 +10647,6 @@ stdout-stream@^1.4.0:
 stealthy-require@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
-  integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
 
 stream-browserify@^2.0.1:
   version "2.0.1"
@@ -11169,7 +11161,6 @@ topo@2.x.x:
 tough-cookie@>=2.3.3:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.5.0.tgz#cd9fb2a0aa1d5a12b473bd9fb96fa3dcff65ade2"
-  integrity sha512-nlLsUzgm1kfLXSXfRZMc1KLAugd4hqJHDTvc2hDIwS3mZAfMEuMbc03SujMF+GEcpaX/qboeycw6iO8JwVv2+g==
   dependencies:
     psl "^1.1.28"
     punycode "^2.1.1"
@@ -11260,35 +11251,21 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typeface-merriweather@0.0.43:
-  version "0.0.43"
-  resolved "https://registry.yarnpkg.com/typeface-merriweather/-/typeface-merriweather-0.0.43.tgz#b615f7aaf5f826c0cf1da7473af7ef28c7c44428"
-
-typeface-montserrat@0.0.43:
-  version "0.0.43"
-  resolved "https://registry.yarnpkg.com/typeface-montserrat/-/typeface-montserrat-0.0.43.tgz#c70d76b85ab613a9f4855c061c354eac561c1aae"
-
-typography-breakpoint-constants@^0.16.18:
-  version "0.16.18"
-  resolved "https://registry.yarnpkg.com/typography-breakpoint-constants/-/typography-breakpoint-constants-0.16.18.tgz#5b1e24a31879662ca0456828b8f8f8158cd2b436"
+typography-breakpoint-constants@^0.16.19:
+  version "0.16.19"
+  resolved "https://registry.yarnpkg.com/typography-breakpoint-constants/-/typography-breakpoint-constants-0.16.19.tgz#e0e89147749562cbb46ce76c47ff0f73372765e7"
 
 typography-normalize@^0.16.18:
   version "0.16.18"
   resolved "https://registry.yarnpkg.com/typography-normalize/-/typography-normalize-0.16.18.tgz#19e8db32c6881d3745b7d67dc63ee6f6cfb681d1"
 
-typography-theme-github@^0.16.18:
-  version "0.16.18"
-  resolved "https://registry.yarnpkg.com/typography-theme-github/-/typography-theme-github-0.16.18.tgz#b2ac344695b6f6c5499f016f11d7b0112a46e374"
-  dependencies:
-    gray-percentage "^2.0.0"
-
-typography-theme-parnassus@^0.16.18:
-  version "0.16.18"
-  resolved "https://registry.yarnpkg.com/typography-theme-parnassus/-/typography-theme-parnassus-0.16.18.tgz#2fa80538846484e4ec561f4ba5aaf9844b92f9d6"
+typography-theme-alton@^0.16.19:
+  version "0.16.19"
+  resolved "https://registry.yarnpkg.com/typography-theme-alton/-/typography-theme-alton-0.16.19.tgz#0204ae473e159f4a66c76f3f8a6edd98e4d63625"
   dependencies:
     compass-vertical-rhythm "^1.2.1"
     gray-percentage "^2.0.0"
-    typography-breakpoint-constants "^0.16.18"
+    typography-breakpoint-constants "^0.16.19"
 
 typography@^0.16.17:
   version "0.16.18"

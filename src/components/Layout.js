@@ -5,9 +5,6 @@ import Helmet from 'react-helmet'
 import classes from './Layout.module.scss'
 import SubscribeModal from './SubscribeModal'
 
-// Import typeface
-import 'typeface-merriweather'
-
 class Layout extends React.Component {
   constructor(props) {
     super(props)
@@ -120,22 +117,22 @@ class Layout extends React.Component {
               </div>
             </nav>
             <div className={classes.iconsWrapper}>
-                <a href="https://twitter.com/LGutweter">
-                  <Img fixed={data.twitter.childImageSharp.fixed} />
-                </a>
-                <a href="https://github.com/liorgu">
-                  <Img fixed={data.github.childImageSharp.fixed} />
-                </a>
-                <a href="https://www.linkedin.com/in/lior-gutweter-46156394">
-                  <Img fixed={data.linkedin.childImageSharp.fixed} />
-                </a>
-              </div>
-              <div className={classes.subscribe}>
-                {'Subscribe By: '}
-                <a onClick={this.showSubscribeModal}>Email</a>
-                {' / '}
-                <a href="/rss.xml">RSS</a>
-              </div>
+              <a href="https://twitter.com/LGutweter">
+                <Img fixed={data.twitter.childImageSharp.fixed} />
+              </a>
+              <a href="https://github.com/liorgu">
+                <Img fixed={data.github.childImageSharp.fixed} />
+              </a>
+              <a href="https://www.linkedin.com/in/lior-gutweter-46156394">
+                <Img fixed={data.linkedin.childImageSharp.fixed} />
+              </a>
+            </div>
+            <div className={classes.subscribe}>
+              {'Subscribe By: '}
+              <a onClick={this.showSubscribeModal}>Email</a>
+              {' / '}
+              <a href="/rss.xml">RSS</a>
+            </div>
             {this.props.children}
           </div>
         )}

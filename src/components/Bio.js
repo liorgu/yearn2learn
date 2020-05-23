@@ -8,7 +8,7 @@ const Bio = () => (
   <StaticQuery
     query={graphql`
       query {
-        liorImage: file(relativePath: { eq: "lior.png" }) {
+        liorImage: file(relativePath: { eq: "lior-no-bg.png" }) {
           childImageSharp {
             fixed(width: 150, height: 150) {
               ...GatsbyImageSharpFixed
@@ -23,7 +23,9 @@ const Bio = () => (
         <div className={classes.text}>
           <div>Written by</div>
           <div>
-            <a href="https://twitter.com/LGutweter"> <strong>Lior Gutweter</strong> </a>
+            <a href="https://twitter.com/LGutweter">
+              <strong>Lior Gutweter</strong>
+            </a>
           </div>
         </div>
       </div>

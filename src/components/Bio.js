@@ -8,7 +8,7 @@ const Bio = () => (
   <StaticQuery
     query={graphql`
       query {
-        liorImage: file(relativePath: { eq: "lior-no-bg.png" }) {
+        liorImage: file(relativePath: { eq: "lior.png" }) {
           childImageSharp {
             fixed(width: 150, height: 150) {
               ...GatsbyImageSharpFixed
